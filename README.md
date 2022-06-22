@@ -12,7 +12,7 @@ Train (with 100 iterations) and export the first version of model:
 ```
 tools/run_in_docker.sh -d tensorflow/serving:latest-devel python /tensorflow-serving/tensorflow_serving/example/mnist_saved_model.py --training_iteration=100 --model_version=1 /tmp/mnist
 ```
-Train (with 2000 iterations) and export the second version of model:
+Train (with 1000 iterations) and export the second version of model:
 ```
 tools/run_in_docker.sh -d tensorflow/serving:latest-devel python /tensorflow-serving/tensorflow_serving/example/mnist_saved_model.py --training_iteration=1000 --model_version=2 /tmp/mnist
 ```
@@ -59,7 +59,7 @@ docker run -p 8500:8500 -p 8501:8501 -v $PWD/mnist:/models/mnist -t --entrypoint
 ```
 cd mnist
 ```
-Predict with python
+Predict with predict.py
 ```
 python predict.py
 ```
@@ -86,7 +86,7 @@ docker run -p 8500:8500 -p 8501:8501 -v $PWD/fashion_mnist:/models/mnist -t --en
 ```
 cd fashion_mnist
 ```
-Predict with python
+Predict with fashion_mnist_predict.py
 ```
 python fashion_mnist_predict.py
 ```
