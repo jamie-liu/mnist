@@ -1,7 +1,7 @@
 # Mnist train and pridict 
 ---
 
-## Run mnist example from 
+## Run mnist example from tfserving
 ### Clone the project
 ```
 git clone https://github.com/tensorflow/serving.git
